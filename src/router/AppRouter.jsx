@@ -1,41 +1,35 @@
-import React from 'react'
-import { BrowserRouter , Route, Routes } from "react-router-dom";
-import Home from '../pages/home/Home';
-import About from '../pages/about/About';
-import PrivateRouter from './PrivateRouter';
-import Contact from '../pages/contact/Contact';
-import Navbar from '../components/Navbar/Navbar';
-import Projects from '../pages/projects/Projects';
-import Footer from '../components/Footer/Footer';
+import Home from "../pages/home/Home";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import About from "../pages/about/About";
+import Projects from "../pages/projects/Projects";
+import Contact from "../pages/contact/Contact";
+import NotFound from "../components/Error/NotFound";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
   return (
-    <div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          element={
+            <>
+              <Navbar />
+              <Outlet />
+              <Footer />
+            </>
+          }>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contacts" element={<Contact />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-  <BrowserRouter>
-  <Navbar/>
+export default AppRouter;
 
-   
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/projects' element={<Projects/>}/>
-
-
-
-      <Route path='/contact' element={<PrivateRouter/>}>
-        <Route path='' element={<Contact/>} />
-
-      </Route>
-
-    </Routes>
-  
-
-
-  </BrowserRouter>
-  <Footer/>
-  </div>
-  )
-}
-
-export default AppRouter
+//! navbar ve footerın notfound sayfasında gözükmesini istemediğimiz için yukarıdaki yapıyı kurduk
