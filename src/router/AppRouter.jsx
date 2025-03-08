@@ -1,11 +1,11 @@
 import Home from "../pages/home/Home";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
 import About from "../pages/about/About";
 import Projects from "../pages/projects/Projects";
 import Contact from "../pages/contact/Contact";
 import NotFound from "../components/Error/NotFound";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from '../components/Footer/Footer'
 
 const AppRouter = () => {
   return (
@@ -14,9 +14,9 @@ const AppRouter = () => {
         <Route
           element={
             <>
-              <Navbar />
+              <Navbar/>
               <Outlet />
-              <Footer />
+              <Footer/>
             </>
           }>
           <Route path="/" element={<Home />} />
