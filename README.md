@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# React Sass Showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application showcasing the use of Sass for styling. It includes routing, responsive design, and a personal portfolio layout.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   **Routing:** Uses React Router v7 for navigation between different pages.
+-   **Sass Styling:** Demonstrates the use of Sass for modular and maintainable styling.
+-   **Responsive Design:** Implements responsive design using Sass mixins and media queries.
+-   **Portfolio Layout:** Presents a personal portfolio with sections for home, about, projects, and contact.
+-   **Private Routing:** Includes a private route example to protect the contact page.
+-   **Font Awesome Icons:** Utilizes Font Awesome for social media icons and contact information.
 
-### `yarn start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   React 19.0.0
+-   React DOM 19.0.0
+-   React Router DOM 7.1.1
+-   React Scripts 5.0.1
+-   Sass 1.83.4
+-   Font Awesome 6.2.1
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `yarn test`
+To run this project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  **Clone the repository:**
 
-### `yarn build`
+    ```bash
+    git clone <repository_url>
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.  **Navigate to the project directory:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    cd react-sass-showcase
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Install dependencies:**
 
-### `yarn eject`
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4.  **Start the development server:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    This will open the application in your default web browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
+  ```
+  react-sass-showcase/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Footer/
+│   │   │   ├── Footer.js
+│   │   │   ├── Footer.scss
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.js
+│   │   │   ├── Navbar.scss
+│   ├── helper/
+│   │   ├── imageData.js
+│   ├── pages/
+│   │   ├── about/
+│   │   │   ├── About.js
+│   │   │   ├── About.scss
+│   │   ├── contact/
+│   │   │   ├── Contact.js
+│   │   │   ├── Contact.scss
+│   │   ├── home/
+│   │   │   ├── Home.js
+│   │   │   ├── Home.scss
+│   │   ├── projects/
+│   │   │   ├── Projects.js
+│   │   │   ├── Projects.scss
+│   ├── router/
+│   │   ├── AppRouter.js
+│   │   ├── PrivateRouter.js
+│   ├── scss/
+│   │   ├── mixins.scss
+│   │   ├── reset.scss
+│   │   ├── variables.scss
+│   ├── App.js
+│   ├── App.scss
+│   ├── index.js
+│   ├── index.css
+├── package.json
+├── package-lock.json
+└── README.md
+    ```
 
-## Learn More
+-   `src/components`: Contains reusable React components.
+    -   `Footer`: Displays the footer section with social icons and copyright.
+    -   `Navbar`: Displays the navigation bar with links to different pages.
+-   `src/helper`: Contains helper files like `imageData.js` for project images.
+-   `src/pages`: Contains React components for each page.
+    -   `about`: Displays information about the person.
+    -   `contact`: Displays contact information. (Protected by PrivateRouter)
+    -   `home`: Displays the home page with a welcome message.
+    -   `projects`: Displays a grid of project images.
+-   `src/router`: Contains routing components.
+    -   `AppRouter`: Manages the application's routing.
+    -   `PrivateRouter`: Protects routes that require authentication.
+-   `src/scss`: Contains Sass files for styling.
+    -   `mixins.scss`: Reusable Sass mixins.
+    -   `reset.scss`: CSS reset styles.
+    -   `variables.scss`: Sass variables for colors, fonts, etc.
+-   `App.js`: The main application component.
+-   `App.scss`: Global styles for the application.
+-   `index.js`: Entry point of the application.
+-   `index.css`: Global CSS styles.
+-   `package.json`: Manages project dependencies and scripts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Sass Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Sass structure is organized to promote modularity and maintainability.
 
-### Code Splitting
+-   `reset.scss`: Resets default browser styles.
+-   `variables.scss`: Defines variables for colors, fonts, and other reusable values.
+-   `mixins.scss`: Contains reusable Sass mixins for media queries, background images, etc.
+-   Component-specific `.scss` files are located alongside their respective `.js` files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Routing
 
-### Analyzing the Bundle Size
+The application uses React Router for navigation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-   `AppRouter.js` defines the routes for the application.
+-   `PrivateRouter.js` is used to protect the contact page, simulating authentication.
 
-### Making a Progressive Web App
+## Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The application implements responsive design using Sass media queries and mixins.
 
-### Advanced Configuration
+-   Media queries are defined in `mixins.scss` and used throughout the application.
+-   The layout adjusts based on screen size to provide an optimal user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+-   Navigate through the pages using the navigation bar.
+-   View project images on the projects page.
+-   Access contact information on the contact page (requires authentication).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `yarn build` fails to minify
+Contributions are welcome! If you find a bug or have an idea for a new feature, please open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License.
