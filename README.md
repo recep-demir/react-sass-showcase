@@ -1,5 +1,10 @@
 # React Sass Showcase
 
+[Live Demo](https://showcase-react-sass.netlify.app/)
+## Screenshots
+
+![App Screenshot](./public/image.png)
+
 This project is a React application showcasing the use of Sass for styling. It includes routing, responsive design, and a personal portfolio layout.
 
 ## Features
