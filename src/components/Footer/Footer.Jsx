@@ -1,12 +1,12 @@
 import React from 'react'
-import {useLocation} from "react-router-dom"
+import { useLocation } from 'react-router-dom'
 import "./Footer.scss"
+
 const Footer = () => {
-  const {pathname} = useLocation()
-  
+    const {pathname} = useLocation()
   return (
-    
-      <footer className={pathname==="/" ? "horizontal" : pathname ==="/contacts" ? "middle" : "vertical"}>
+    <div>
+        <footer className={pathname==="/" ? "horizontal" : pathname ==="/contacts" ? "middle" : "vertical"}>
         <div className="social-icons">
           <a href="#twitter" rel="noopener noreferrer" target='true'>
             <i className="fab fa-twitter fa-2x"></i>
@@ -23,8 +23,10 @@ const Footer = () => {
         </div>
         <div className="copyright">&copy; Copyright 2023</div>
       </footer>
-  
-  );
+
+
+    </div>
+  )
 }
 
-export default Footer;
+export default Footer

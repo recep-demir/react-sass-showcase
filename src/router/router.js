@@ -5,7 +5,7 @@ import About from "../pages/about/About";
 import Projects from "../pages/projects/Projects";
 import Contact from "../pages/contact/Contact";
 import NotFound from "../components/Error/NotFound";
-import Footer from '../components/Footer/Footer'
+import Footer from "../components/Footer/Footer";
 
 // You can do this:
 export const router = createBrowserRouter([
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
       <>
         <Navbar />
         <Outlet />
-        <Footer />
+        <Footer/>
       </>
     ),
     errorElement: <NotFound/>,

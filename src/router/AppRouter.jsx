@@ -5,7 +5,7 @@ import Contact from "../pages/contact/Contact";
 import NotFound from "../components/Error/NotFound";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
-import Footer from '../components/Footer/Footer'
+import Footer from "../components/Footer/Footer";
 
 const AppRouter = () => {
   return (
