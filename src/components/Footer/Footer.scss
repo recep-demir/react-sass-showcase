@@ -37,8 +37,10 @@ footer.vertical{
         bottom: 1rem;
         @extend .link-style;
     }
+
     .copyright{
         position: fixed;
+        
         bottom: 1rem;
         right: 3rem;
         // transform: rotate(90deg) translate(-3rem, -5rem);
